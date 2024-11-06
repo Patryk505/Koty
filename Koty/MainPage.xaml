@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Koty.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <HorizontalStackLayout>
+                <Entry
+                    Placeholder="co kot mówi"
+                    x:Name="entSays"
+                    WidthRequest="300"/>
+                <Picker
+                    Title="wybierz cechę"
+                    x:Name="picker">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Silly</x:String>
+                            <x:String>blue</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </HorizontalStackLayout>
+            <Button
+                Text="Daj kota"
+                Clicked="btnKotClicked"/>
+            <Image
+                Source="https://cataas.com/cat"
+                WidthRequest="700"
+                x:Name="imgCat"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
